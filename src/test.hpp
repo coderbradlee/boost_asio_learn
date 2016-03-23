@@ -455,7 +455,7 @@ public:
 		m_available_spots++;
 	}
 private:
-	std::std::vector<parking_spot> m_parking_spots;
+	std::vector<parking_spot> m_parking_spots;
 	int m_available_spots;
 	//const int spots_per_row=10;
 };
