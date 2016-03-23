@@ -432,7 +432,7 @@ private:
 	boost::shared_ptr<vehicle> m_vehicle;
 	vehicle_size m_spot_size;
 	int m_spot_number;
-	boost::share_ptr<level> m_level; 
+	boost::shared_ptr<level> m_level; 
 };
 class level
 {
