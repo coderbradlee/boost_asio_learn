@@ -407,13 +407,32 @@ private:
 	std::set<song> m_songs;
 	std::map<string,std::set<boost::shared_ptr<song>>> m_play_lists;
 };
+
+enum  class vehicle_size
+{
+	motor,small,large
+};
 class vehicle
 {
 
 };
+class level;
 class parking_spot
 {
+public:
+	parking_spot(boost::shared_ptr<level> l,int num,vehicle_size v):m_level(l),m_spot_number(num),m_spot_size(v),m_vehicle(nullptr)
+	{
 
+	}
+	bool is_available()
+	{
+		return m_vehicle==nullptr;
+	}
+private:
+	boost::shared_ptr<vehicle> m_vehicle;
+	vehicle_size m_spot_size;
+	int m_spot_number;
+	boost::share_ptr<level> m_level; 
 };
 class level
 {
