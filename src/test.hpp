@@ -411,14 +411,34 @@ class vehicle
 {
 
 };
+class parking_spot
+{
+
+};
 class level
 {
 public:
 	level(int flr,int num_spots):m_available_spots(num_spots){}
+	int get_available_spots()
+	{
+		return m_available_spots;
+	}
+	bool park_vehicle(boost::shared_ptr<vehicle> vec)
+	{
+
+	}
+	bool park_at_spot(int num,boost::shared_ptr<vehicle> vec)
+	{
+
+	}
+	void spot_freed()
+	{
+		m_available_spots++;
+	}
 private:
 	std::std::vector<parking_spot> m_parking_spots;
 	int m_available_spots;
-	const int spots_per_row=10;
+	//const int spots_per_row=10;
 };
 class parking_lot
 {
