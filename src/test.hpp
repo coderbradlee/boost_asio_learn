@@ -388,5 +388,48 @@ private:
 };
 boost::shared_ptr<call_center> call_center::m_ps = nullptr;
 boost::mutex call_center::m_mu;
-#endif	/* PAYPAL_HPP */
+
+
+class player
+{};
+class user
+{};
+class song
+{};
+class jukebox
+{
+public:
+	jukebox(boost::shared_ptr<player> p,boost::shared_ptr<user> u,std::set<song> s):m_player(p),m_user(u),m_songs(s){}
+
+private:
+	boost::shared_ptr<player> m_player;
+	boost::shared_ptr<user> m_user;
+	std::set<song> m_songs;
+	std::map<string,std::set<boost::shared_ptr<song>>> m_play_lists;
+};
+class vehicle
+{
+
+};
+class level
+{
+public:
+	level(int flr,int num_spots):m_available_spots(num_spots){}
+private:
+	std::std::vector<parking_spot> m_parking_spots;
+	int m_available_spots;
+	const int spots_per_row=10;
+};
+class parking_lot
+{
+public:
+	bool park_vehicle(boost::shared_ptr<vehicle> v)
+    {}
+private:
+    std::vector<level> m_levels;
+    const int num_levels=5;
+
+};
+
+#endif
 
