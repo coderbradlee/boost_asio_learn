@@ -1,0 +1,63 @@
+request:
+curl -X POST 'https://api.sandbox.paypal.com/v1/oauth2/token'  -H "Accept: application/json"  -H "Accept-Language: en_US"  -u "AQHK3B-gB3sdb1ierWaMMap-6dKJtC-NGIRPeCa6GsZHVioiso-peMOyDgdCpThLv2rz39BTzqk6ajWy:EA8LWDvEaQlIqU4n9g37hRFNq7SAapANDz4HI9vsB4dsraeu_yQ2FQnw2nYTMH7Z3-G5FbTwKFMb-wId" -d "grant_type=client_credentials"
+
+response:
+
+{"scope":"https://uri.paypal.com/services/subscriptions https://api.paypal.com/v1/payments/.* https://api.paypal.com/v1/vault/credit-card https://uri.paypal.com/services/applications/webhooks openid https://uri.paypal.com/payments/payouts https://api.paypal.com/v1/vault/credit-card/.*","nonce":"2016-02-14T05:52:56Z--ebgMSv-qGhEIKPFQZ6HlL1eMsVE7wY1JMctDuP38c","access_token":"A101.5ISzMVClBtqYV7gCNkqdDfaId0CEBXdCO2jA8SaxhKi8kpgcmduNoSfvRGjZXERZ.x68pM55nY5i1VY_6REN2Mk9ucja","token_type":"Bearer","app_id":"APP-80W284485P519543T","expires_in":32400}
+
+
+request:
+
+curl -v -X GET https://api.sandbox.paypal.com/v1/payments/payment?sort_order=asc&sort_by=update_time \
+-H "Content-Type:application/json" \
+-H "Authorization: Bearer A101.5ISzMVClBtqYV7gCNkqdDfaId0CEBXdCO2jA8SaxhKi8kpgcmduNoSfvRGjZXERZ.x68pM55nY5i1VY_6REN2Mk9ucja"
+
+request:
+curl -v https://api.sandbox.paypal.com/v1/payments/payment \
+-H "Content-Type:application/json" \
+-H "Authorization: Bearer <Access-Token>" \
+-d '{
+  "intent":"sale",
+  "payer":{
+    "payment_method":"credit_card",
+    "funding_instruments":[
+      {
+        "credit_card":{
+          "number":"4417119669820331",
+          "type":"visa",
+          "expire_month":11,
+          "expire_year":2018,
+          "cvv2":"874",
+          "first_name":"Betsy",
+          "last_name":"Buyer",
+          "billing_address":{
+            "line1":"111 First Street",
+            "city":"Saratoga",
+            "state":"CA",
+            "postal_code":"95070",
+            "country_code":"US"
+          }
+        }
+      }
+    ]
+  },
+  "transactions":[
+    {
+      "amount":{
+        "total":"7.47",
+        "currency":"USD",
+        "details":{
+          "subtotal":"7.41",
+          "tax":"0.03",
+          "shipping":"0.03"
+        }
+      },
+      "description":"This is the payment transaction description."
+    }
+  ]
+}'
+
+
+curl -v -X POST 'https://api.sandbox.paypal.com/v1/payments/payment' -H "Content-Type:application/json" -H "Authorization: Bearer A101.SQXekh8S0_NZ1G8JuLyfJwDFDAnN-JBzFq-XKNLRKDiwfmIQUcKpvqGGvfMRb94L.1d-NCE_igxxdV-WT0WhkJOrSife" -d '{    \"intent\": \"sale\",    \"redirect_urls\": {        \"return_url\": \"http://www.return.com\",        \"cancel_url\": \"http://www.cancel.com\"    },    \"payer\": {        \"payment_method\": \"paypal\",        \"payer_info\": {            \"tax_id_type\": \"BR_CPF\",            \"tax_id\": \"Fh618775690\"        }    },    \"transactions\": [        {            \"amount\": {                \"total\": \"34.07\",                \"currency\": \"USD\",                \"details\": {                    \"subtotal\": \"30.00\",                    \"tax\": \"0.07\",                    \"shipping\": \"1.00\",                    \"handling_fee\": \"1.00\",                    \"shipping_discount\": \"-1.00\",                    \"insurance\": \"1.00\"                }            },            \"description\": \"This is the payment transaction description.\",            \"custom\": \"EMS_90048630024435\",            \"invoice_number\": \"48787589677\",            \"payment_options\": {                \"allowed_payment_method\": \"INSTANT_FUNDING_SOURCE\"            },            \"soft_descriptor\": \"ECHI5786786\",            \"item_list\": {                \"items\": [                    {                        \"name\": \"bowling\",                        \"description\": \"Bowling Team Shirt\",                        \"quantity\": \"5\",                        \"price\": \"3\",                        \"tax\": \"0.01\",                        \"sku\": \"1\",                        \"currency\": \"USD\"                    },                    {                        \"name\": \"mesh\",                        \"description\": \"80s Mesh Sleeveless Shirt\",                        \"quantity\": \"1\",                        \"price\": \"15\",                        \"tax\": \"0.02\",                        \"sku\": \"product34\",                        \"currency\": \"USD\"                    }                ],                \"shipping_address\": {                    \"recipient_name\": \"Betsy Buyer\",                    \"line1\": \"111 First Street\",                    \"city\": \"Saratoga\",                    \"country_code\": \"US\",                    \"postal_code\": \"95070\",                    \"state\": \"CA\"                }            }        }    ]}'
+
+
