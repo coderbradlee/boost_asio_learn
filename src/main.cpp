@@ -12,6 +12,15 @@ using namespace restbed;
 int main() {
 	try
 	{
+
+		cout<<sizeof(short)<<endl;
+		cout<<sizeof(int)<<endl;
+		cout<<sizeof(long)<<endl;
+		cout<<sizeof(float)<<endl;
+		cout<<sizeof(double)<<endl;
+		cout<<sizeof(long long)<<endl;
+		cout<<sizeof(int *)<<endl;
+		cout<<sizeof(size_t)<<endl;		
 		//read config.ini
 		boost::property_tree::ptree pt;
 		boost::property_tree::ini_parser::read_ini("config.ini", pt);
@@ -24,9 +33,9 @@ int main() {
 
 			boost::shared_ptr<call_center> test=call_center::get_instance();
 			boost::shared_ptr<caller> c=boost::shared_ptr<caller>(new caller());
-			c->set_rank(0);
-			test->add_call(c);
-			test->dispatch_call();
+			// c->set_rank(0);
+			// test->add_call(c);
+			// test->dispatch_call();
 
 			std::cout << "now time elapsed:" << pass.format(6) << std::endl;
 		}
