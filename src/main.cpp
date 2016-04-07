@@ -12,18 +12,23 @@ using namespace restbed;
 int main() {
 	try
 	{
-
-		cout<<sizeof(short)<<endl;
-		cout<<sizeof(int)<<endl;
-		cout<<sizeof(long)<<endl;
-		cout<<sizeof(float)<<endl;
-		cout<<sizeof(double)<<endl;
-		cout<<sizeof(long double)<<endl;
-		cout<<sizeof(long long)<<endl;
-		cout<<sizeof(int *)<<endl;
-		cout<<sizeof(size_t)<<endl;		
-		cout<<sizeof(char)<<endl;	
-		cout<<sizeof(wchar_t)<<endl;	
+		{
+			cout<<sizeof(short)<<endl;
+			cout<<sizeof(int)<<endl;
+			cout<<sizeof(long)<<endl;
+			cout<<sizeof(float)<<endl;
+			cout<<sizeof(double)<<endl;
+			cout<<sizeof(long double)<<endl;
+			cout<<sizeof(long long)<<endl;
+			cout<<sizeof(int *)<<endl;
+			cout<<sizeof(size_t)<<endl;		
+			cout<<sizeof(char)<<endl;	
+			cout<<sizeof(wchar_t)<<endl;
+			cout<<"a operationn";
+			long code;
+			cin>>code;
+			cout<<"\a you entered <<code<<" ...\n"<<endl;
+		}	
 		//read config.ini
 		boost::property_tree::ptree pt;
 		boost::property_tree::ini_parser::read_ini("config.ini", pt);
