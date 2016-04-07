@@ -22,6 +22,8 @@ int main() {
 		cout<<sizeof(long long)<<endl;
 		cout<<sizeof(int *)<<endl;
 		cout<<sizeof(size_t)<<endl;		
+		cout<<sizeof(char)<<endl;	
+		cout<<sizeof(wchar_t)<<endl;	
 		//read config.ini
 		boost::property_tree::ptree pt;
 		boost::property_tree::ini_parser::read_ini("config.ini", pt);
