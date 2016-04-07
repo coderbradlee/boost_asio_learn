@@ -24,15 +24,27 @@ int main() {
 			cout<<sizeof(size_t)<<endl;		
 			cout<<sizeof(char)<<endl;	
 			cout<<sizeof(wchar_t)<<endl;
-					struct foo 
-					{
-				        short s;
-				        char c;
-				        int flip:1;
-				        int nybble:4;
-				        int septet:7;
-		    		}; 
-		    cout<<sizeof(foo)<<endl;
+			 typedef struct {
+        void* data;
+        size_t size;
+        
+    } xx_data;
+    
+    typedef struct {
+        int i;
+        int64_t t;
+        char c;
+        
+        union {
+            int int_val;
+            int64_t int64_val;
+            double real_val;
+            char* text_val;
+            xx_data blob_val;
+            char c1;
+        };
+    } vt;
+		    cout<<sizeof(vt)<<endl;
     		}	
 		//read config.ini
 		boost::property_tree::ptree pt;
