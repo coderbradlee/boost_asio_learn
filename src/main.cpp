@@ -24,11 +24,16 @@ int main() {
 			cout<<sizeof(size_t)<<endl;		
 			cout<<sizeof(char)<<endl;	
 			cout<<sizeof(wchar_t)<<endl;
-			cout<<"a operationn";
-			long code;
-			cin>>code;
-			cout<<"\a you entered "<<code<<" ...\n"<<endl;
-		}	
+					struct foo 
+					{
+				        short s;
+				        char c;
+				        int flip:1;
+				        int nybble:4;
+				        int septet:7;
+		    		}; 
+		    cout<<sizeof(foo)<<endl;
+    		}	
 		//read config.ini
 		boost::property_tree::ptree pt;
 		boost::property_tree::ini_parser::read_ini("config.ini", pt);
