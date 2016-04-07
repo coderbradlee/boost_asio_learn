@@ -27,7 +27,7 @@ int main() {
 			cout<<"a operationn";
 			long code;
 			cin>>code;
-			cout<<"\a you entered <<code<<" ...\n"<<endl;
+			cout<<"\a you entered "<<code<<" ...\n"<<endl;
 		}	
 		//read config.ini
 		boost::property_tree::ptree pt;
