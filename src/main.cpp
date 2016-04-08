@@ -60,7 +60,8 @@ int main() {
 		    } test;
 		    test xxx;
 		    cout<<sizeof(test)<<endl;
-			
+			char * char_ptr=nullptr;
+			delete char_ptr;
     		}	
 		//read config.ini
 		boost::property_tree::ptree pt;
