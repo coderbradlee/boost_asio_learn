@@ -47,7 +47,7 @@ int main() {
 		    cout<<sizeof(vt)<<endl;
 		    cout<<"\u00e2teau"<<endl;
 		    cout<<R"(test"xx"yy"\n" in)"<<endl;
-		    string test
+		    struct test
 		    {
 		    	unsigned int s:4;
 		    	unsigned int tt:4;
