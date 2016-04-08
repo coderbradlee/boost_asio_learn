@@ -56,10 +56,7 @@ int main() {
 		    } test;
 		    test xxx;
 		    cout<<sizeof(test)<<endl;
-			cout<<sizeof(xxx.s)<<endl;
-			cout<<sizeof(xxx.tt)<<endl;
-			cout<<sizeof(xxx.ot)<<endl;
-			cout<<sizeof(xxx.sg)<<endl;
+			
     		}	
 		//read config.ini
 		boost::property_tree::ptree pt;
