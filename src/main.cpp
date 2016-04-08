@@ -49,8 +49,10 @@ int main() {
 		    cout<<R"(test"xx"yy"\n" in)"<<endl;
 		    typedef struct
 		    {
-		    	unsigned int s:4;
-		    	unsigned int tt:4;
+		    	// unsigned int s:4;
+		    	// unsigned int tt:4;
+		    	int64_t s:4;
+		    	int64_t tt:4
 		    	bool ot:1;
 		    	bool sg:1;
 		    } test;
