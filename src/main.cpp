@@ -46,6 +46,7 @@ int main() {
     } vt;
 		    cout<<sizeof(vt)<<endl;
 		    cout<<"\u00e2teau"<<endl;
+		    cout<<R"(test"xx"yy"\n" in)"<<endl;
     		}	
 		//read config.ini
 		boost::property_tree::ptree pt;
