@@ -47,15 +47,18 @@ int main() {
 		    cout<<sizeof(vt)<<endl;
 		    cout<<"\u00e2teau"<<endl;
 		    cout<<R"(test"xx"yy"\n" in)"<<endl;
-		    struct test
+		    typedef struct test
 		    {
 		    	unsigned int s:4;
 		    	unsigned int tt:4;
 		    	bool ot:1;
 		    	bool sg:1;
-		    };
+		    }test;
 		    cout<<sizeof(test)<<endl;
-
+			cout<<sizeof(test.s)<<endl;
+			cout<<sizeof(test.tt)<<endl;
+			cout<<sizeof(test.ot)<<endl;
+			cout<<sizeof(test.sg)<<endl;
     		}	
 		//read config.ini
 		boost::property_tree::ptree pt;
