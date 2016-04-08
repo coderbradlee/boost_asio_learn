@@ -52,7 +52,7 @@ int main() {
 		    	// unsigned int s:4;
 		    	// unsigned int tt:4;
 		    	int64_t s:4;
-		    	int64_t tt:4
+		    	int64_t tt:4;
 		    	bool ot:1;
 		    	bool sg:1;
 		    } test;
