@@ -69,11 +69,12 @@ int main() {
 			long double dipsea[64]{0};
 			array<char,30> actor1{0};
 			//6
-			vector<char> cheeseburger{"cheeseburger"};
+			vector<char> cheeseburger={"cheeseburger"};
 			enum Response{Yes=1,No=0,Maybe=2};
 			const int string_num=10;
 			vector<string> string10(string_num);
 			array<string,string_num> string11;
+			cout<<(int*)"test"<<endl;
     		}	
 		//read config.ini
 		boost::property_tree::ptree pt;
