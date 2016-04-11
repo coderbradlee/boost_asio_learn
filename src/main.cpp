@@ -70,6 +70,7 @@ int main() {
 			array<char,30> actor1{0};
 			//6
 			char cheeseburger[]={"cheeseburger"};
+			cout<<sizeof(cheeseburger)<<endl;
 			enum Response{Yes=1,No=0,Maybe=2};
 			const int string_num=10;
 			vector<string> string10(string_num);
