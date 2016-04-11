@@ -62,11 +62,18 @@ int main() {
 		    cout<<sizeof(test)<<endl;
 			char * char_ptr=nullptr;
 			delete char_ptr;
+			//1
 			char actor[30]{0};
 			short betsie[100]{0};
 			float chuck[13]{0};
 			long double dipsea[64]{0};
 			array<char,30> actor1{0};
+			//6
+			vector<char> cheeseburger{"cheeseburger"};
+			enum Response{Yes=1,No=0,Maybe=2};
+			const int string_num=10;
+			vector<string> string10(string_num);
+			array<string,string_num> string11;
     		}	
 		//read config.ini
 		boost::property_tree::ptree pt;
