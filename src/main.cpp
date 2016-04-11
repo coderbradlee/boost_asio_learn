@@ -82,6 +82,13 @@ int main() {
 			{
 				cout<<guests<<endl;
 			}
+			int x=10;
+			{
+				cout<<x<<endl;
+				int x=20;
+				cout<<x<<endl;
+			}
+			cout<<x<<endl;
     		}	
 		//read config.ini
 		boost::property_tree::ptree pt;
