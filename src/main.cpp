@@ -77,6 +77,11 @@ int main() {
 			vector<string> string10(string_num);
 			array<string,string_num> string11;
 			cout<<(int*)"test"<<endl;
+			int guests=8;
+			while(guests++<10)
+			{
+				cout<<guests<<endl;
+			}
     		}	
 		//read config.ini
 		boost::property_tree::ptree pt;
