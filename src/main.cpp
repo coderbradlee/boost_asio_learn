@@ -66,7 +66,7 @@ int main() {
 			short betsie[100]{0};
 			float chuck[13]{0};
 			long double dipsea[64]{0};
-			array<char,30> actor{0};
+			array<char,30> actor1{0};
     		}	
 		//read config.ini
 		boost::property_tree::ptree pt;
