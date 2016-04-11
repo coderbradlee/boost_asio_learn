@@ -62,6 +62,11 @@ int main() {
 		    cout<<sizeof(test)<<endl;
 			char * char_ptr=nullptr;
 			delete char_ptr;
+			char actor[30]{0};
+			short betsie[100]{0};
+			float chuck[13]{0};
+			long double dipsea[64]{0};
+			array<char,30> actor{0};
     		}	
 		//read config.ini
 		boost::property_tree::ptree pt;
